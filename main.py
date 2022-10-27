@@ -36,37 +36,14 @@ class LightShow:
             if MONTH == 12:
                 self.christmas()
                 print('Its Christmas')
+            # RANGERS
+                #self.rangers()
 
     def halloween(self):
-        # self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN]
-        # self.blinker(20, 3)
-
-        self.colours=[colour.BLACK, colour.CREAM]
-        self.blinker(2, 4)
-        self.colours=[(255,10,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,20,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,30,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,40,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,50,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,60,0), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,10,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,20,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,30,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,40,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,50,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
-        self.colours=[(255,60,20), colour.DARK_GREEN]
-        self.blinker(1, 3)
+        self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN, colour.PURPLE]
+        self.blinker(20, 3)
+        self.colours=[colour.DARK_RED, colour.WHITE, colour.BLUE]
+        self.blinker(20, 3)
 
     def christmas(self):
         self.colours=[colour.DARK_RED, colour.DARK_GREEN]
@@ -79,6 +56,10 @@ class LightShow:
         self.blinker(20, 4)
         self.colours=[colour.BLUE, colour.YELLOW, colour.GREEN, colour.RED]
         self.random_blink(100, 1)
+
+    def rangers(self):
+        self.colours=[colour.DARK_RED, colour.WHITE, colour.BLUE]
+        self.blinker(20, 3)
 
     def blank_lights(self):
         for led_strip in self.led_strips:
