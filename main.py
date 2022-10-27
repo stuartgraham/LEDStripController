@@ -112,7 +112,8 @@ class LightShow:
                             led_strip[led_id] = alt_colour
 
                 led_strip.show()
-            time.sleep(0.2)
+            #time.sleep(0.2)
+            time.sleep(0.4)
             runs = runs - 1
 
     def random_blink(self, runs, groupings=1):
