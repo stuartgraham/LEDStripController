@@ -9,6 +9,7 @@ from itertools import cycle
 from datetime import datetime
 
 MONTH = datetime.now().month
+DAY = datetime.now().day
 
 class LEDStrip(neopixel.NeoPixel):
 
@@ -29,11 +30,15 @@ class LightShow:
     def __post_init__(self):
         while True:
             # HALLOWEEN
-            if MONTH == 10:
+            if MONTH == 10 and DAY == 31:
                 self.halloween()
                 print('Its Halloween')
             # CHRISTMAS
-            if MONTH == 12:
+            christmas_day_window = [12,26]
+            christmas_day_window_open = False
+            if christmas_day_window[0] < DAY and DAY < christmas_day_window[1]: 
+                christmas_day_window_open = True
+            if MONTH == 12 and christmas_day_window_open:
                 self.christmas()
                 print('Its Christmas')
             # RANGERS
@@ -41,8 +46,6 @@ class LightShow:
 
     def halloween(self):
         self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN, colour.PURPLE]
-        self.blinker(20, 3)
-        self.colours=[colour.DARK_RED, colour.WHITE, colour.BLUE]
         self.blinker(20, 3)
 
     def christmas(self):
@@ -96,7 +99,7 @@ class LightShow:
 
                 led_strip.show()
             #time.sleep(0.2)
-            time.sleep(2)
+            time.sleep(1)
             runs = runs - 1
 
     def random_blink(self, runs, groupings=1):
