@@ -66,12 +66,6 @@ class LightShow:
         for led_strip in self.led_strips:
             led_strip.fill((colour.BLACK))
 
-    def matrix(self):
-        self.matrix = linst
-        for led_strip in self.led_strips:
-            pass
-
-
     def blinker(self, runs, grouping):
         self.blank_lights()
 
@@ -115,10 +109,6 @@ class LightShow:
                 led_strip.show()
             time.sleep(0.2)
             runs = runs - 1
-
-
-    def barber(self, runs, groups=4):
-        pass
 
 
 left = LEDStrip(board.D18, 150, reverse_order=True)
