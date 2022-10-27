@@ -27,24 +27,16 @@ class LightShow:
     led_strips : list = field(default_factory=list)
 
     def __post_init__(self):
-        self.matrix()
-
-        for strip in self.led_strips:
-            # print(f'pin : {strip.pin}')
-            # print(f'len : {len(strip)}')
-            # print(f'reverse : {strip.reverse_order}')
-            # print(f'order_ref : {strip.order_list}')
-            # print(dir(strip))
-            pass
-
+        print(MONTH)
         while True:
             # HALLOWEEN
             if MONTH == 10:
                 self.halloween()
+                #print('Its Halloween')
             # CHRISTMAS
             if MONTH == 12:
                 self.christmas()
-
+                #print('Its Halloween')
 
     def halloween(self):
         self.colours=[colour.ORANGE, colour.DARK_GREEN]
