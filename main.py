@@ -1,10 +1,14 @@
 import time
 import random
+
 import board
 import neopixel
 from dataclasses import dataclass, field
 import colour
 from itertools import cycle
+from datetime import datetime
+
+MONTH = datetime.now().month
 
 class LEDStrip(neopixel.NeoPixel):
 
@@ -23,6 +27,8 @@ class LightShow:
     led_strips : list = field(default_factory=list)
 
     def __post_init__(self):
+        self.matrix()
+
         for strip in self.led_strips:
             # print(f'pin : {strip.pin}')
             # print(f'len : {len(strip)}')
@@ -32,21 +38,42 @@ class LightShow:
             pass
 
         while True:
-            self.colours=[colour.DARK_RED, colour.DARK_GREEN]
-            self.blinker(20, 3)
-            self.colours=[colour.BLACK, colour.CREAM]
-            self.blinker(20, 3)
-            self.colours=[colour.DARK_RED, colour.DARK_GREEN]
-            self.blinker(20, 4)
-            self.colours=[colour.BLACK, colour.CREAM]
-            self.blinker(20, 4)
-            self.colours=[colour.BLUE, colour.YELLOW, colour.GREEN, colour.RED]
-            self.random_blink(100, 1)
+            # HALLOWEEN
+            if MONTH == 10:
+                self.halloween()
+            # CHRISTMAS
+            if MONTH == 12:
+                self.christmas()
+
+
+    def halloween(self):
+        self.colours=[colour.ORANGE, colour.DARK_GREEN]
+        self.blinker(20, 3)
+
+    def christmas(self):
+        self.colours=[colour.DARK_RED, colour.DARK_GREEN]
+        self.blinker(20, 3)
+        self.colours=[colour.BLACK, colour.CREAM]
+        self.blinker(20, 3)
+        self.colours=[colour.DARK_RED, colour.DARK_GREEN]
+        self.blinker(20, 4)
+        self.colours=[colour.BLACK, colour.CREAM]
+        self.blinker(20, 4)
+        self.colours=[colour.BLUE, colour.YELLOW, colour.GREEN, colour.RED]
+        self.random_blink(100, 1)
+
+    def blank_lights(self):
+        for led_strip in self.led_strips:
+            led_strip.fill((colour.BLACK))
+
+    def matrix(self):
+        self.matrix = linst
+        for led_strip in self.led_strips:
+            pass
 
 
     def blinker(self, runs, grouping):
-        for led_strip in self.led_strips:
-            led_strip.fill((colour.BLACK))
+        self.blank_lights()
 
         while runs > 0:
             prime_colour = self.colours[0]
@@ -79,8 +106,8 @@ class LightShow:
             runs = runs - 1
 
     def random_blink(self, runs, groupings=1):
-        for led_strip in self.led_strips:
-            led_strip.fill((colour.BLACK))
+        self.blank_lights()
+
         while runs > 0:
             for led_strip in self.led_strips:
                 for i in range(len(led_strip)):
