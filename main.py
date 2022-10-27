@@ -41,30 +41,32 @@ class LightShow:
         # self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN]
         # self.blinker(20, 3)
 
+        self.colours=[colour.BLACK, colour.CREAM]
+        self.blinker(2, 4)
         self.colours=[(255,10,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,20,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,30,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,40,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,50,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,60,0), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,10,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,20,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,30,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,40,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,50,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
         self.colours=[(255,60,20), colour.DARK_GREEN]
-        self.blinker(2, 3)
+        self.blinker(1, 3)
 
     def christmas(self):
         self.colours=[colour.DARK_RED, colour.DARK_GREEN]
