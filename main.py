@@ -45,7 +45,7 @@ class LightShow:
                 #self.rangers()
 
     def halloween(self):
-        self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN, colour.PURPLE]
+        self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN]
         self.blinker(20, 3)
 
     def christmas(self):
@@ -86,13 +86,13 @@ class LightShow:
 
                 for i in range(int(len(led_strip) / grouping)):
                     if (i % 2) == 0:
-                        for j in range(grouping):
+                        for _ in range(grouping):
                             led_id = next(pool)
                             led_id = led_strip.order_list[led_id]
                             led_strip[led_id] = prime_colour
 
                     else:
-                        for j in range(grouping):
+                        for _ in range(grouping):
                             led_id = next(pool)
                             led_id = led_strip.order_list[led_id]
                             led_strip[led_id] = alt_colour
