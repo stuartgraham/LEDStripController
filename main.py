@@ -47,6 +47,9 @@ class LightShow:
     def halloween(self):
         self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN]
         self.blinker(20, 3)
+        self.colours=[colour.DARK_ORANGE, colour.BLACK]
+        self.blinker(20, 10)
+
 
     def christmas(self):
         self.colours=[colour.DARK_RED, colour.DARK_GREEN]
