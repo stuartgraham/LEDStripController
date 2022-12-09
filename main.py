@@ -34,7 +34,7 @@ class LightShow:
                 self.halloween()
                 print('Its Halloween')
             # CHRISTMAS
-            christmas_day_window = [12,26]
+            christmas_day_window = [1,26]
             christmas_day_window_open = False
             if christmas_day_window[0] < DAY and DAY < christmas_day_window[1]: 
                 christmas_day_window_open = True
