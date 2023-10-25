@@ -30,7 +30,8 @@ class LightShow:
     def __post_init__(self):
         while True:
             # HALLOWEEN
-            if MONTH == 10 and DAY == 31:
+            HALLOWEEN_DAYS = [25,26,27,28,29,30,31]
+            if MONTH == 10 and DAY in HALLOWEEN_DAYS:
                 self.halloween()
                 print('Its Halloween')
             # CHRISTMAS
