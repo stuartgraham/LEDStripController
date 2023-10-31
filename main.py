@@ -29,7 +29,6 @@ class LightShow:
 
     def __post_init__(self):
         while True:
-            
             # HALLOWEEN
             HALLOWEEN_DAYS = [30,31]
             if MONTH == 10 and DAY in HALLOWEEN_DAYS:
