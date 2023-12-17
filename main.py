@@ -65,7 +65,7 @@ class LightShow:
         self.random_blink(100, 1)
 
     def rangers(self):
-        self.colours=[colour.DARK_RED, colour.WHITE, colour.BLUE]
+        self.colours=[colour.BLUE, colour.WHITE, colour.DARK_RED, ]
         self.blinker(20, 3)
 
     def blank_lights(self):
