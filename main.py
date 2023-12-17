@@ -30,20 +30,20 @@ class LightShow:
     def __post_init__(self):
         while True:
             # HALLOWEEN
-            HALLOWEEN_DAYS = [30,31]
-            if MONTH == 10 and DAY in HALLOWEEN_DAYS:
-                self.halloween()
-                print('Its Halloween')
+            # HALLOWEEN_DAYS = [30,31]
+            # if MONTH == 10 and DAY in HALLOWEEN_DAYS:
+            #     self.halloween()
+            #     print('Its Halloween')
             # CHRISTMAS
-            christmas_day_window = [1,26]
-            christmas_day_window_open = False
-            if christmas_day_window[0] < DAY and DAY < christmas_day_window[1]: 
-                christmas_day_window_open = True
-            if MONTH == 12 and christmas_day_window_open:
-                self.christmas()
-                print('Its Christmas')
-            # RANGERS
-                #self.rangers()
+            # christmas_day_window = [1,26]
+            # christmas_day_window_open = False
+            # if christmas_day_window[0] < DAY and DAY < christmas_day_window[1]: 
+            #     christmas_day_window_open = True
+            # if MONTH == 12 and christmas_day_window_open:
+            #     self.christmas()
+            #     print('Its Christmas')
+            #RANGERS
+            self.rangers()
 
     def halloween(self):
         self.colours=[colour.DARK_ORANGE, colour.DARK_GREEN]
